@@ -19,7 +19,7 @@ cv2.rectangle(image, (x, y), (x + width, y + height), (0, 255, 0), 2)  # (0, 255
 roi_gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
 
 # Execute o reconhecimento de texto com o Tesseract
-text = pytesseract.image_to_string(roi_gray, lang='por')
+text = pytesseract.image_to_string(image, lang='por')
 
 # Imprima o texto extraído
 print(text.split('\n'))
